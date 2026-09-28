@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "transit_sla_auditor",
+  "description": "Audits total shipment duration in hours against promised carrier cold chain SLA",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "hours_in_transit": {
+        "type": "string",
+        "description": "Total elapsed transit time in hours"
+      }
+    },
+    "required": [
+      "hours_in_transit"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

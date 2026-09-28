@@ -1,0 +1,39 @@
+spec_version: "0.1.0"
+name: git-coldchainwatch
+version: 1.0.0
+description: "Autonomous Pharmaceutical Cold Chain Temperature Excursion & Transit Integrity Agent"
+author: "masood-mashu"
+license: "Apache-2.0"
+
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - cold-chain-excursion-auditing
+  - mean-kinetic-temperature-calculation
+
+tools:
+  - temp-excursion-evaluator
+  - mkt-kinetic-temp-calculator
+  - transit-sla-auditor
+
+runtime:
+  max_turns: 50
+  timeout: 120
+
+tags:
+  - manufacturing
+  - supply-chain
+  - cold-chain
+  - pharma-logistics
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-coldchainwatch-01"
+  passport_category: "Manufacturing & supply chain"

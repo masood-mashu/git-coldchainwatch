@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "mkt_kinetic_temp_calculator",
+  "description": "Calculates Mean Kinetic Temperature (MKT) approximation across shipment thermal profile",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "temp_readings_json": {
+        "type": "string",
+        "description": "JSON array of float temperatures in Celsius"
+      }
+    },
+    "required": [
+      "temp_readings_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

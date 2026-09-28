@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "temp_excursion_evaluator",
+  "description": "Evaluates temperature time-series logs against standard 2C to 8C cold chain bounds",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "temp_series_json": {
+        "type": "string",
+        "description": "JSON array of float temperature readings in Celsius recorded during transit"
+      }
+    },
+    "required": [
+      "temp_series_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}
